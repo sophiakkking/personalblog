@@ -4,17 +4,6 @@
 
 技术栈：Next.js 16（App Router）+ Tailwind CSS 4 + Node 内置 SQLite（`node:sqlite`，零原生编译依赖）。
 
-## 开发环境要求
-
-- Node.js ≥ 24（使用内置 `node:sqlite`，本机为便携版，见下文）
-
-本开发机没有系统安装的 Node.js，使用的是便携版（位于 `C:\Users\Morefun\.local\node`）。在 Git Bash 中运行时需带 PATH 前缀：
-
-```bash
-PATH="/c/Users/Morefun/.local/node:$PATH" npm run dev
-```
-
-（已安装系统 Node.js 的机器上直接用 `npm run dev` 即可。）
 
 ## 快速开始
 
