@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "highlight.js/styles/github.css";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, "Courier New", monospace;
+}
+
+body {
+  @apply bg-white text-gray-900 antialiased;
+}
+
+/* Markdown 正文微调：代码块底色与边框，图片圆角 */
+.prose pre {
+  background: #f6f8fa;
+  border: 1px solid #e5e7eb;
+}
+.prose pre code {
+  background: transparent;
+  padding: 0;
+}
+.prose img {
+  border-radius: 0.5rem;
+}
+.prose :where(code):not(:where(pre code))::before,
+.prose :where(code):not(:where(pre code))::after {
+  content: none;
+}
